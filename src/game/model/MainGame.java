@@ -1,4 +1,4 @@
-package game.logic;
+package game.model;
 
 import java.util.Random;
 import java.util.Scanner;

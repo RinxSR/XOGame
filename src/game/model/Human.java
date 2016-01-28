@@ -1,4 +1,4 @@
-package game.logic;
+package game.model;
 
 public class Human extends Player{
 

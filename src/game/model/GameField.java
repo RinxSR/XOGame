@@ -1,4 +1,4 @@
-package game.logic;
+package game.model;
 
 public class GameField {
     private static char emptyDot = '.';
