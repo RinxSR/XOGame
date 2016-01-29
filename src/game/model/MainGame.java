@@ -15,10 +15,27 @@ public class MainGame {
                 System.out.println("Некорректное зачение");
             while (!GameField.needForWinSetting())
                 System.out.println("Некорректное зачение");
+            GameField.typeOfGame();
+
+            Player p1;
+            Player p2;
 
             newField = new GameField();
-            Player p1 = new Ai(newField, 'X');
-            Player p2 = new Ai(newField, 'O');
+
+            switch (GameField.getTypeOfGame()) {
+                case 1:
+                    p1 = new Human(newField, 'X');
+                    p2 = new Human(newField, 'O');
+                    break;
+                case 2:
+                    p1 = new Human(newField, 'X');
+                    p2 = new Ai(newField, 'O');
+                    break;
+                case 3:
+                    p1 = new Ai(newField, 'X');
+                    p2 = new Ai(newField, 'O');
+                    break;
+            }
 
             newField.showField();
 

@@ -5,6 +5,19 @@ public class GameField {
     private static int fieldSize;
     private static int needForWin;
     private char[][] field = new char[fieldSize][fieldSize];
+    private static int typeOfGame;
+
+    public static int getTypeOfGame() {
+        return typeOfGame;
+    }
+
+    public static boolean setTypeOfGame(int typeOfGame) {
+        if (typeOfGame > 0 && typeOfGame < 4) {
+            GameField.typeOfGame = typeOfGame;
+            return true;
+        }
+        return false;
+    }
 
     public GameField() {
         for (int i = 0; i < fieldSize; i++)
@@ -52,6 +65,17 @@ public class GameField {
     public static boolean needForWinSetting() {
         System.out.println("Введите длину линии для победы");
         return setNeedForWin(MainGame.sc.nextInt());
+    }
+
+    // запрос типа игры
+    public static void typeOfGame() {
+        do {
+            System.out.println("Выберите тип игры (число от 1 до 3: ");
+            System.out.println("1. человек - человек");
+            System.out.println("2. человек - компьютер");
+            System.out.println("3. компьютер - компьютер");
+
+        } while (!GameField.setTypeOfGame(MainGame.sc.nextInt()));
     }
 
     // отрисовка текущего состояния игрового поля
