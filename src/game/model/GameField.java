@@ -78,6 +78,8 @@ public class GameField {
         } while (!GameField.setTypeOfGame(MainGame.sc.nextInt()));
     }
 
+
+
     // отрисовка текущего состояния игрового поля
     public void showField() {
         System.out.print("   ");
@@ -136,46 +138,6 @@ public class GameField {
                 if (checkLine(i, j, 1, 1, xo, needForWin)) return true;
                 if (checkLine(i, j, 1, -1, xo, needForWin)) return true;
             }
-        return false;
-    }
-
-    // перегрузка проверки, проверяем все линии из заданной точки
-    public boolean checkAllLine(int _x, int _y, char xo, int _needForWin) {
-        field[_y][_x] = xo;
-
-        if (checkLine(_x, _y, 1, 0, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, 0, 1, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, -1, 0, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, 0, -1, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, 1, 1, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, 1, -1, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, -1, -1, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        if (checkLine(_x, _y, -1, 1, xo, _needForWin)) {
-            field[_y][_x] = emptyDot;
-            return true;
-        }
-        field[_y][_x] = emptyDot;
         return false;
     }
 

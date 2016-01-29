@@ -17,23 +17,31 @@ public class MainGame {
                 System.out.println("Некорректное зачение");
             GameField.typeOfGame();
 
-            Player p1;
-            Player p2;
+
 
             newField = new GameField();
 
+            Player humanPlayer1 = new Human(newField, 'X');
+            Player humanPlayer2 = new Human(newField, 'O');
+            Player aiPlayer1 = new Ai(newField, 'X');
+            Player aiPlayer2 = new Ai(newField, 'O');
+
+            Player p1 = null;
+            Player p2 = null;
+
+
             switch (GameField.getTypeOfGame()) {
                 case 1:
-                    p1 = new Human(newField, 'X');
-                    p2 = new Human(newField, 'O');
+                    p1 = humanPlayer1;
+                    p2 = humanPlayer2;
                     break;
                 case 2:
-                    p1 = new Human(newField, 'X');
-                    p2 = new Ai(newField, 'O');
+                    p1 = humanPlayer1;
+                    p2 = aiPlayer2;
                     break;
                 case 3:
-                    p1 = new Ai(newField, 'X');
-                    p2 = new Ai(newField, 'O');
+                    p1 = aiPlayer1;
+                    p2 = aiPlayer2;
                     break;
             }
 
