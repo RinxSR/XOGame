@@ -8,11 +8,26 @@ import game.model.Player;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Основной класс программы, взаимодействие с пользователем.
+ */
 public class MainGame {
+    /**
+     * Объявление переменной GameField.
+     */
     public static GameField newField;
+    /**
+     * Создание статичного сканнера для всего проекта.
+     */
     public static Scanner sc = new Scanner(System.in);
+    /**
+     * Создание статичного рандомайзера для всего проекта.
+     */
     public static Random rand = new Random();
 
+    /**
+     * Точка входа программы.
+     */
     public static void main(String[] args) {
 
         do {

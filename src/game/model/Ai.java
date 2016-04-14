@@ -3,11 +3,20 @@ package game.model;
 import game.controller.GameField;
 import game.view.MainGame;
 
+/**
+ * Класс Ai. Для описания игры компьютера.
+ */
 public class Ai extends Player{
 
     private int x, y;
     private char oppositeDot;
 
+    /**
+     * Конструктор класса.
+     *
+     * @param _field ссылка на игровое поле
+     * @param dot    чем ходить "крестик" или "нолик"
+     */
     public Ai(GameField _field, char dot) {
         targetField = _field;
         this.dot = dot;
@@ -40,7 +49,13 @@ public class Ai extends Player{
         System.out.println();
     }
 
-    // проверка линии игрока
+    /**
+     * Проверка на количество "крестиков" или "ноликов" соперника подряд.
+     *
+     * @param _numbOnLine задается количество точек подряд
+     * @return возвращает truy или false
+     */
+// проверка линии игрока
     public boolean checkOppositeTurn(int _numbOnLine) {
         for (int i = 0; i < GameField.getFieldSize(); i++) {
             for (int j = 0; j < GameField.getFieldSize(); j++) {
@@ -59,7 +74,13 @@ public class Ai extends Player{
         return false;
     }
 
-    // проверка линии компьютера
+    /**
+     * Проверка на количество своих "крестиков" или "ноликов" подряд.
+     *
+     * @param _numbOnLine задается количество точек подряд
+     * @return возвращает truy или false
+     */
+// проверка линии компьютера
     public boolean checkMyTurn(int _numbOnLine) {
         for (int i = 0; i < GameField.getFieldSize(); i++) {
             for (int j = 0; j < GameField.getFieldSize(); j++) {

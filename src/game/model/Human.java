@@ -3,8 +3,17 @@ package game.model;
 import game.controller.GameField;
 import game.view.MainGame;
 
+/**
+ * Класс Человек. Для игры пользователем.
+ */
 public class Human extends Player{
 
+    /**
+     * Конструктор класса.
+     *
+     * @param _field ссылка на игровое поле
+     * @param dot    чем ходить "крестик" или "нолик"
+     */
     public Human(GameField _field, char dot) {
         targetField = _field;
         this.dot = dot;
