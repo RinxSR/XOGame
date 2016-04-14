@@ -1,4 +1,6 @@
-package game.model;
+package game.controller;
+
+import game.view.MainGame;
 
 public class GameField {
     private static char emptyDot = '.';

@@ -1,5 +1,7 @@
 package game.model;
 
+import game.controller.GameField;
+
 public abstract class Player {
 
     protected GameField targetField;
@@ -13,6 +15,6 @@ public abstract class Player {
         this.dot = dot;
     }
 
-    abstract void turn();
+    public abstract void turn();
 }
 

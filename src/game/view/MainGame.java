@@ -1,4 +1,9 @@
-package game.model;
+package game.view;
+
+import game.controller.GameField;
+import game.model.Ai;
+import game.model.Human;
+import game.model.Player;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,5 +1,8 @@
 package game.model;
 
+import game.controller.GameField;
+import game.view.MainGame;
+
 public class Ai extends Player{
 
     private int x, y;

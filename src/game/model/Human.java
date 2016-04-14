@@ -1,5 +1,8 @@
 package game.model;
 
+import game.controller.GameField;
+import game.view.MainGame;
+
 public class Human extends Player{
 
     public Human(GameField _field, char dot) {
